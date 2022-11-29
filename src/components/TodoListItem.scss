@@ -1,11 +1,16 @@
-.TodoListItem {
-  padding: 1rem;
-  display: flex;
-  align-items: center;
+.TodoListItem-virtualized {
+  & + & {
+    border-top: 1px solid #dee2e6;
+  }
   &:nth-child(even) {
     //nth-child는 부모 요소의 n번째 자식 요소를 의미
     background: #f8f9fa;
   }
+}
+.TodoListItem {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
   .checkbox {
     cursor: pointer;
     flex: 1;
@@ -37,8 +42,5 @@
     &:hover {
       color: #ff8787;
     }
-  }
-  & + & {
-    border-top: 1px solid #dee2e6;
   }
 }
